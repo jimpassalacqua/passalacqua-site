@@ -9,10 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
 
@@ -45,22 +41,32 @@
       <p class="hero-sub">Bring me your creative challenges. Whether you have a clear vision or just a product and a goal, I'll bring the ideas, and <strong>together we'll make something worth remembering.</strong></p>
       <a href="#work" class="hero-cta">See the work <span class="cta-arrow">→</span></a>
     </div>
-    <div class="hero-strip">
-      <div class="hero-strip-item">
-        <img src="images/hero/star-wars-ep3.jpg" alt="Star Wars Episode III" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-        <div class="strip-placeholder">Star Wars<br>Episode III</div>
+    <div class="hero-gallery">
+      <div class="hero-gallery-main">
+        <div class="hero-gallery-slide active">
+          <img src="images/hero/star-wars-ep3.jpg" alt="Star Wars Episode III" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="strip-placeholder">Star Wars<br>Episode III</div>
+        </div>
+        <div class="hero-gallery-slide">
+          <img src="images/hero/coppola-winery.jpg" alt="Coppola Winery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="strip-placeholder">Coppola<br>Winery</div>
+        </div>
+        <div class="hero-gallery-slide">
+          <img src="images/hero/indiana-jones.jpg" alt="Indiana Jones" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="strip-placeholder">Indiana Jones</div>
+        </div>
+        <div class="hero-gallery-slide">
+          <img src="images/hero/ongaro-billboard.jpg" alt="Ongaro Meme Billboard" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="strip-placeholder">Ongaro<br>Billboard</div>
+        </div>
+        <button class="hero-gallery-arrow prev" aria-label="Previous image">‹</button>
+        <button class="hero-gallery-arrow next" aria-label="Next image">›</button>
       </div>
-      <div class="hero-strip-item">
-        <img src="images/hero/coppola-winery.jpg" alt="Coppola Winery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-        <div class="strip-placeholder">Coppola<br>Winery</div>
-      </div>
-      <div class="hero-strip-item">
-        <img src="images/hero/indiana-jones.jpg" alt="Indiana Jones" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-        <div class="strip-placeholder">Indiana Jones</div>
-      </div>
-      <div class="hero-strip-item">
-        <img src="images/hero/ongaro-billboard.jpg" alt="Ongaro Meme Billboard" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-        <div class="strip-placeholder">Ongaro<br>Billboard</div>
+      <div class="hero-gallery-dots">
+        <button class="hero-gallery-dot active" aria-label="Slide 1"></button>
+        <button class="hero-gallery-dot" aria-label="Slide 2"></button>
+        <button class="hero-gallery-dot" aria-label="Slide 3"></button>
+        <button class="hero-gallery-dot" aria-label="Slide 4"></button>
       </div>
     </div>
   </section>
@@ -154,8 +160,8 @@
           <p class="client-desc">For six years I led the online creative for one of the most beloved gaming studios in the world. <strong>Over 30 immersive experiential websites</strong> across the Star Wars, Indiana Jones, and original game franchises, each built to match the scale and identity of the IP it represented. I led a full-time team, managed agency and vendor relationships, and oversaw an annual budget of $350K while juggling three to five concurrent projects at any given time.</p>
         </div>
       </div>
-      <div class="project-grid">
-        <div class="project">
+      <div class="project-grid" data-gallery="lucasarts">
+        <div class="project" data-index="0">
           <div class="project-thumb">
             <img src="images/lucasarts/ep3.jpg" alt="Star Wars Episode III" />
             <div class="project-overlay"></div>
@@ -165,7 +171,7 @@
             <p class="project-sub">Immersive launch experience for one of the most anticipated film releases of the decade</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="1">
           <div class="project-thumb">
             <img src="images/lucasarts/kotor2.jpg" alt="Knights of the Old Republic II" />
             <div class="project-overlay"></div>
@@ -175,7 +181,7 @@
             <p class="project-sub">Deep world-building site for the critically acclaimed RPG sequel</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="2">
           <div class="project-thumb">
             <img src="images/lucasarts/indiana-jones.jpg" alt="Indiana Jones" />
             <div class="project-overlay"></div>
@@ -185,7 +191,7 @@
             <p class="project-sub">Extending a legendary franchise into an interactive digital experience</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="3">
           <div class="project-thumb">
             <img src="images/lucasarts/battlefront2.jpg" alt="Star Wars Battlefront II" />
             <div class="project-overlay"></div>
@@ -195,7 +201,7 @@
             <p class="project-sub">High-energy campaign site built around multiplayer launch momentum</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="4">
           <div class="project-thumb">
             <img src="images/lucasarts/monkey-island.jpg" alt="Escape from Monkey Island" />
             <div class="project-overlay"></div>
@@ -205,7 +211,7 @@
             <p class="project-sub">Bringing the irreverent personality of a beloved game series to life online</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="5">
           <div class="project-thumb">
             <img src="images/lucasarts/bounty-hunter.jpg" alt="Star Wars Bounty Hunter" />
             <div class="project-overlay"></div>
@@ -223,15 +229,15 @@
     <div class="client reveal">
       <div class="client-header">
         <div class="client-meta">
-          <h2 class="client-name">Francis Ford Coppola</h2>
+          <h2 class="client-name">Francis Ford<br>Coppola</h2>
         </div>
         <div class="client-intro">
           <p class="client-role">Interactive Director</p>
           <p class="client-desc">For thirteen years I was the digital steward of Francis Ford Coppola's creative vision, bringing it to life across a <strong>$300M family-owned portfolio</strong> spanning wine, film, food, hospitality, and ecommerce. Francis is the creative visionary behind everything that bears his name. My job was to translate that vision into digital experiences worthy of it, across 15 distinct affiliate operations, leading a team of four and ensuring every pixel reflected the standard he set.</p>
         </div>
       </div>
-      <div class="project-grid">
-        <div class="project">
+      <div class="project-grid" data-gallery="coppola">
+        <div class="project" data-index="0">
           <div class="project-thumb">
             <img src="images/coppola/winery.jpg" alt="Francis Ford Coppola Winery" />
             <div class="project-overlay"></div>
@@ -241,7 +247,7 @@
             <p class="project-sub">Full digital presence for the flagship winery including pools, events, and wine club</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="1">
           <div class="project-thumb">
             <img src="images/coppola/inglenook.jpg" alt="Inglenook" />
             <div class="project-overlay"></div>
@@ -251,7 +257,7 @@
             <p class="project-sub">Digital experience for Coppola's historic Napa estate, balancing heritage with modern luxury</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="2">
           <div class="project-thumb">
             <img src="images/coppola/tetro.jpg" alt="Tetro" />
             <div class="project-overlay"></div>
@@ -261,7 +267,7 @@
             <p class="project-sub">Film website for Coppola's personal passion project, cinematic and intimate in equal measure</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="3">
           <div class="project-thumb">
             <img src="images/coppola/palazzo.jpg" alt="Palazzo Margherita" />
             <div class="project-overlay"></div>
@@ -271,7 +277,7 @@
             <p class="project-sub">Luxury hospitality site for Coppola's Italian resort property in Bernalda</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="4">
           <div class="project-thumb">
             <img src="images/coppola/coppola-feast.jpg" alt="Coppola Feast" />
             <div class="project-overlay"></div>
@@ -281,7 +287,7 @@
             <p class="project-sub">Digital experience for Coppola's food and entertaining brand, rich with Italian spirit</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-index="5">
           <div class="project-thumb">
             <img src="images/coppola/encyclopedia-wines.jpg" alt="Encyclopedia Wines" />
             <div class="project-overlay"></div>
@@ -299,15 +305,15 @@
     <div class="client reveal">
       <div class="client-header">
         <div class="client-meta">
-          <h2 class="client-name">Ongaro &amp; Sons</h2>
+          <h2 class="client-name">Ongaro <span class="accent">&amp;</span> Sons</h2>
         </div>
         <div class="client-intro">
           <p class="client-role">Marketing Manager</p>
           <p class="client-desc">A 90-year-old Sonoma County institution with deep roots and a brand ready to grow into its next chapter. I evolved the visual identity without touching the logo, <strong>building a complete system from a single design element that was hiding in plain sight.</strong> The result is a coherent, confident brand across van wraps, billboards, digital and print that looks like it always belonged at this level.</p>
         </div>
       </div>
-      <div class="campaign-grid">
-        <div class="campaign">
+      <div class="campaign-grid" data-gallery="ongaro">
+        <div class="campaign" data-index="0">
           <div class="campaign-thumb">
             <img src="images/ongaro/meme-billboard.jpg" alt="Meme Billboard" />
             <div class="project-overlay"></div>
@@ -317,7 +323,7 @@
             <p class="project-sub">Placed directly across from an annual pumpkin patch that backs up traffic every fall. The distracted boyfriend meme on an actual highway billboard, with the pumpkin patch as the distraction. People slowed down, laughed, took photos, and shared it. Earned media from a static placement.</p>
           </div>
         </div>
-        <div class="campaign">
+        <div class="campaign" data-index="1">
           <div class="campaign-thumb">
             <img src="images/ongaro/pumpkin-spice.jpg" alt="Pumpkin Spice Campaign" />
             <div class="project-overlay"></div>
@@ -327,7 +333,7 @@
             <p class="project-sub">Meeting the audience exactly where they are. A seasonal campaign that turned a cultural moment into a service reminder, with enough wit to make people actually read an HVAC ad.</p>
           </div>
         </div>
-        <div class="campaign">
+        <div class="campaign" data-index="2">
           <div class="campaign-thumb">
             <img src="images/ongaro/back-to-cool.jpg" alt="Back to Cool Campaign" />
             <div class="project-overlay"></div>
@@ -337,7 +343,7 @@
             <p class="project-sub">A summer HVAC campaign built around a free MacBook Air incentive. Connecting a tech-forward offer to a seasonal message in a way that felt fresh and unexpected for the category.</p>
           </div>
         </div>
-        <div class="campaign">
+        <div class="campaign" data-index="3">
           <div class="campaign-thumb">
             <img src="images/ongaro/brand-identity.jpg" alt="Brand Identity" />
             <div class="project-overlay"></div>
@@ -401,6 +407,20 @@
     </a>
     <p class="footer-vet">US Air Force Veteran</p>
   </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous">‹</button>
+    <div class="lightbox-content">
+      <img class="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <p class="lightbox-title"></p>
+        <p class="lightbox-counter"></p>
+      </div>
+    </div>
+    <button class="lightbox-arrow lightbox-next" aria-label="Next">›</button>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
