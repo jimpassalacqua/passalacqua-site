@@ -397,7 +397,7 @@ ul { list-style: none; }
 
 .client-name {
   font-family: 'DM Serif Display', serif;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1.2;
   color: var(--navy);
   font-weight: 400;
