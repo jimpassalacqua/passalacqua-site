@@ -61,45 +61,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// --- HERO GALLERY (with auto-advance) ---
-const gallerySlides = document.querySelectorAll('.hero-gallery-slide');
-const galleryDots = document.querySelectorAll('.hero-gallery-dot');
-const galleryPrev = document.querySelector('.hero-gallery-arrow.prev');
-const galleryNext = document.querySelector('.hero-gallery-arrow.next');
+// --- HERO BACKGROUND SLIDESHOW ---
+const heroBgSlides = document.querySelectorAll('.hero-bg-slide');
+const heroDots = document.querySelectorAll('.hero-dot');
 
-let currentSlide = 0;
-let galleryInterval;
+let currentHeroSlide = 0;
+let heroInterval;
 
-function showSlide(index) {
-  gallerySlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-  galleryDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-  currentSlide = index;
+function showHeroSlide(index) {
+  heroBgSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+  heroDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+  currentHeroSlide = index;
 }
 
-function nextSlide() {
-  showSlide((currentSlide + 1) % gallerySlides.length);
-}
-
-function prevSlide() {
-  showSlide((currentSlide - 1 + gallerySlides.length) % gallerySlides.length);
-}
-
-function startAutoAdvance() {
+function startHeroAutoAdvance() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  galleryInterval = setInterval(nextSlide, 5000);
+  heroInterval = setInterval(() => {
+    showHeroSlide((currentHeroSlide + 1) % heroBgSlides.length);
+  }, 6000);
 }
 
-function stopAutoAdvance() {
-  clearInterval(galleryInterval);
-}
-
-if (gallerySlides.length) {
-  galleryNext.addEventListener('click', () => { nextSlide(); stopAutoAdvance(); startAutoAdvance(); });
-  galleryPrev.addEventListener('click', () => { prevSlide(); stopAutoAdvance(); startAutoAdvance(); });
-  galleryDots.forEach((dot, i) => {
-    dot.addEventListener('click', () => { showSlide(i); stopAutoAdvance(); startAutoAdvance(); });
+if (heroBgSlides.length) {
+  heroDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      clearInterval(heroInterval);
+      showHeroSlide(i);
+      startHeroAutoAdvance();
+    });
   });
-  startAutoAdvance();
+  startHeroAutoAdvance();
 }
 
 // --- LIGHTBOX ---
