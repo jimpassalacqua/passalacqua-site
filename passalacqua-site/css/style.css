@@ -524,6 +524,10 @@ ul { list-style: none; }
   aspect-ratio: 1/2;
 }
 
+.project-thumb-billboard {
+  aspect-ratio: 3/1;
+}
+
 .project-thumb img {
   transition: transform 0.4s ease;
 }
