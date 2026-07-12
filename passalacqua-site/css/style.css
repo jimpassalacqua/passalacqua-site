@@ -520,6 +520,10 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
+.project-thumb-portrait {
+  aspect-ratio: 1/2;
+}
+
 .project-thumb img {
   transition: transform 0.4s ease;
 }
