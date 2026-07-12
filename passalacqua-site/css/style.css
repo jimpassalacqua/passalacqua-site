@@ -533,6 +533,10 @@ ul { list-style: none; }
   object-fit: contain;
 }
 
+.project-thumb-van img {
+  object-fit: cover;
+}
+
 .project-thumb img {
   transition: transform 0.4s ease;
 }
