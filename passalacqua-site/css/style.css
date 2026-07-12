@@ -526,6 +526,11 @@ ul { list-style: none; }
 
 .project-thumb-billboard {
   aspect-ratio: 3/1;
+  background: #f0f0f0;
+}
+
+.project-thumb-billboard img {
+  object-fit: contain;
 }
 
 .project-thumb img {
