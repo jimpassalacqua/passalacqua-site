@@ -160,11 +160,12 @@ ul { list-style: none; }
 
 .hero-headline {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(44px, 6vw, 72px);
+  font-size: clamp(44px, 5.5vw, 76px);
   line-height: 1.05;
   letter-spacing: -2px;
   color: var(--navy);
   margin-bottom: 1.5rem;
+  white-space: nowrap;
 }
 
 .hero-headline em {
@@ -930,7 +931,7 @@ ul { list-style: none; }
     aspect-ratio: 16/10;
   }
 
-  .hero-headline { font-size: 40px; letter-spacing: -1px; }
+  .hero-headline { font-size: 36px; letter-spacing: -1px; white-space: normal; }
   .hero-sub { font-size: 16px; }
 
   /* SERVICES MOBILE */
