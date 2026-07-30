@@ -147,26 +147,25 @@ ul { list-style: none; }
   position: relative;
   z-index: 5;
   padding: 5rem 2rem;
-  max-width: 700px;
+  max-width: 960px;
+  width: 100%;
 }
 
 .hero-label {
-  font-size: 11px;
+  font-size: clamp(9px, 1.2vw, 11px);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 1.5rem;
-  white-space: nowrap;
 }
 
 .hero-headline {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(44px, 5.5vw, 76px);
+  font-size: clamp(32px, 5.5vw, 76px);
   line-height: 1.05;
   letter-spacing: -2px;
   color: var(--navy);
   margin-bottom: 1.5rem;
-  white-space: nowrap;
 }
 
 .hero-headline em {
@@ -175,7 +174,7 @@ ul { list-style: none; }
 }
 
 .hero-sub {
-  font-size: 17px;
+  font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.7;
   color: var(--muted);
   max-width: 700px;
@@ -932,7 +931,7 @@ ul { list-style: none; }
     aspect-ratio: 16/10;
   }
 
-  .hero-headline { font-size: 36px; letter-spacing: -1px; white-space: normal; }
+  .hero-headline { font-size: 32px; letter-spacing: -1px; }
   .hero-sub { font-size: 16px; }
 
   /* SERVICES MOBILE */
