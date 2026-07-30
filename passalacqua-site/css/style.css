@@ -156,6 +156,7 @@ ul { list-style: none; }
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 1.5rem;
+  white-space: nowrap;
 }
 
 .hero-headline {
@@ -177,7 +178,7 @@ ul { list-style: none; }
   font-size: 17px;
   line-height: 1.7;
   color: var(--muted);
-  max-width: 520px;
+  max-width: 700px;
   margin-bottom: 2.5rem;
 }
 
