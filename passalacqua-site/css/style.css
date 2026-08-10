@@ -67,24 +67,26 @@ ul { list-style: none; }
 .nav-logo {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0px;
   line-height: 1;
 }
 
 .nav-logo-first {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 700;
   color: var(--amber);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .nav-logo-last {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--navy);
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .nav-links {
@@ -991,8 +993,8 @@ ul { list-style: none; }
 
 @media (max-width: 480px) {
   .project-grid { grid-template-columns: 1fr; }
-  .nav-logo-last { font-size: 20px; letter-spacing: 2px; }
-  .nav-logo-first { font-size: 14px; letter-spacing: 3px; }
+  .nav-logo-first { font-size: 24px; letter-spacing: 2px; }
+  .nav-logo-last { font-size: 11px; letter-spacing: 3px; }
 }
 
 /* --- REDUCED MOTION --- */
