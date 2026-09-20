@@ -67,26 +67,24 @@ ul { list-style: none; }
 .nav-logo {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 2px;
   line-height: 1;
 }
 
 .nav-logo-first {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 400;
   color: var(--amber);
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  line-height: 1;
 }
 
 .nav-logo-last {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 300;
   color: var(--navy);
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  line-height: 1.4;
 }
 
 .nav-links {
@@ -125,9 +123,9 @@ ul { list-style: none; }
 .hero {
   position: relative;
   background: var(--white);
-  min-height: 480px;
+  min-height: 540px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -136,7 +134,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   filter: grayscale(100%);
   opacity: 0;
   transition: opacity 2s ease;
@@ -148,13 +146,12 @@ ul { list-style: none; }
 .hero-content {
   position: relative;
   z-index: 5;
-  padding: 2.5rem 2rem 3rem;
-  max-width: 960px;
-  width: 100%;
+  padding: 5rem 2rem;
+  max-width: 700px;
 }
 
 .hero-label {
-  font-size: clamp(9px, 1.2vw, 11px);
+  font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -163,7 +160,7 @@ ul { list-style: none; }
 
 .hero-headline {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(32px, 5.5vw, 76px);
+  font-size: clamp(44px, 6vw, 72px);
   line-height: 1.05;
   letter-spacing: -2px;
   color: var(--navy);
@@ -176,10 +173,10 @@ ul { list-style: none; }
 }
 
 .hero-sub {
-  font-size: clamp(15px, 1.8vw, 18px);
+  font-size: 17px;
   line-height: 1.7;
   color: var(--muted);
-  max-width: 700px;
+  max-width: 520px;
   margin-bottom: 2.5rem;
 }
 
@@ -926,15 +923,14 @@ ul { list-style: none; }
   /* HERO MOBILE */
   .hero {
     grid-template-columns: 1fr;
-    padding: 0;
-    min-height: unset;
+    padding: 3rem 1.5rem 2.5rem;
   }
 
   .hero-gallery-main {
     aspect-ratio: 16/10;
   }
 
-  .hero-headline { font-size: 32px; letter-spacing: -1px; }
+  .hero-headline { font-size: 40px; letter-spacing: -1px; }
   .hero-sub { font-size: 16px; }
 
   /* SERVICES MOBILE */
@@ -994,8 +990,8 @@ ul { list-style: none; }
 
 @media (max-width: 480px) {
   .project-grid { grid-template-columns: 1fr; }
-  .nav-logo-first { font-size: 24px; letter-spacing: 2px; }
-  .nav-logo-last { font-size: 11px; letter-spacing: 3px; }
+  .nav-logo-last { font-size: 20px; letter-spacing: 2px; }
+  .nav-logo-first { font-size: 14px; letter-spacing: 3px; }
 }
 
 /* --- REDUCED MOTION --- */
@@ -1238,10 +1234,89 @@ ul { list-style: none; }
   color: var(--amber);
 }
 
+/* --- INQUIRY FORM --- */
+.inquiry-form {
+  margin-top: 2.5rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden { display: none; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid rgba(15,42,74,0.2);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s ease;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--amber);
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 32px;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.form-submit:hover {
+  background: var(--amber);
+}
+
 /* --- RESPONSIVE NEW SECTIONS --- */
 @media (max-width: 768px) {
   .engagement-steps { grid-template-columns: 1fr; }
   .quick-start-inner { grid-template-columns: 1fr; }
   .quick-start-price { min-width: unset; }
   .faq-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
 }
